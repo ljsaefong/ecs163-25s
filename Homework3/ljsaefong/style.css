@@ -1,0 +1,85 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #70bc5f;
+}
+
+#dashboard {
+  display: grid;
+  grid-template-columns: 1fr 2.2fr 1fr;
+  grid-template-areas: "bar stream parallel";
+  height: 100vh;
+  width: 100vw;
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#bar-chart {
+  grid-area: bar;
+  height: 45%;
+  min-height: 250px;
+}
+
+#streamgraph-container {
+  grid-area: stream;
+  height: 90%;
+}
+
+#scatterplot-container {
+  grid-area: parallel; 
+  height: 40%;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;     
+  width: 100%;
+  box-sizing: border-box;
+}
+
+svg {
+  width: 100%;
+  height: 90%;
+  max-height: 90%;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+#genre-legend {
+  background-color: rgb(199, 218, 194);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  max-height: 80%;
+  overflow-y: auto;
+  font-size: 12px;
+  margin: 10px;
+}
+
+.legend-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  min-width: 130px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  border: 1px solid #beb6b6;
+}

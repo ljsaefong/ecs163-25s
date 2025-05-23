@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Music & Mental Relationship Health Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <div id="dashboard">
+    <div id="streamgraph-container">
+      <h2>Main Visualization: Genre Listening Trends</h2>
+      <svg id="streamgraph" width="1000" height="400"></svg>
+    </div>
+    <div id="scatterplot-container">
+      <div id="scatterplot-wrapper">
+        <h2>Listening Time Vs Depression</h2>
+        <svg id="scatterplot" width="300" height="200"></svg>
+      </div>
+    </div>
+    <div id="bar-chart">
+      <h2>Favorite Genres by Streaming Service</h2>
+      <svg id="bar" width="600" height="220"></svg>
+      <div id="genre-legend"></div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
